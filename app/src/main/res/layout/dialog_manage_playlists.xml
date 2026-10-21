@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/spotify_dark_gray"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Top Drag Handle -->
+    <View
+        android:layout_width="40dp"
+        android:layout_height="4dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="20dp"
+        android:background="#444444" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Quản lý bài hát &amp; danh sách phát"
+        android:textColor="@color/spotify_white"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="16dp"
+        android:text="Chọn danh sách phát hiển thị công khai trên hồ sơ để người khác nghe theo."
+        android:textColor="@color/spotify_light_gray"
+        android:textSize="13sp" />
+
+    <!-- Add New Playlist Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etNewPlaylistName"
+            android:layout_width="0dp"
+            android:layout_height="44dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_input_box"
+            android:hint="Tên danh sách phát mới..."
+            android:inputType="text"
+            android:paddingStart="14dp"
+            android:paddingEnd="14dp"
+            android:textColor="@color/spotify_white"
+            android:textColorHint="@color/spotify_inactive_icon"
+            android:textSize="14sp" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddNewPlaylist"
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/spotify_green"
+            android:text="Thêm"
+            android:textColor="@color/spotify_black"
+            android:textStyle="bold"
+            app:cornerRadius="22dp"
+            app:icon="@drawable/ic_add"
+            app:iconTint="@color/spotify_black" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="DANH SÁCH HIỆN CÓ"
+        android:textColor="@color/spotify_light_gray"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <!-- List Container -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvManagePlaylists"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:maxHeight="320dp"
+        android:nestedScrollingEnabled="true" />
+
+    <!-- Close Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnCloseManage"
+        android:layout_width="match_parent"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="@color/spotify_card_surface"
+        android:text="Hoàn tất"
+        android:textColor="@color/spotify_white"
+        android:textStyle="bold"
+        app:cornerRadius="23dp" />
+
+</LinearLayout>

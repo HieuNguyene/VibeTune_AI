@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="100dp"
+    android:layout_height="wrap_content"
+    android:layout_marginEnd="12dp"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <!-- Circular Artist Avatar -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="74dp"
+        android:layout_height="74dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:foreground="?attr/selectableItemBackground"
+        app:cardBackgroundColor="@color/spotify_card_surface"
+        app:cardCornerRadius="37dp"
+        app:cardElevation="2dp"
+        app:strokeColor="@color/spotify_divider"
+        app:strokeWidth="1dp">
+
+        <ImageView
+            android:id="@+id/imgArtistAvatar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_avatar_default" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Artist Name -->
+    <TextView
+        android:id="@+id/tvArtistName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ellipsize="end"
+        android:gravity="center"
+        android:maxLines="1"
+        android:text="Vũ."
+        android:textColor="@color/spotify_white"
+        android:textSize="13sp"
+        android:textStyle="bold" />
+
+    <!-- Role/Tag -->
+    <TextView
+        android:id="@+id/tvArtistTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:text="Nghệ sĩ"
+        android:textColor="@color/spotify_light_gray"
+        android:textSize="11sp" />
+</LinearLayout>
